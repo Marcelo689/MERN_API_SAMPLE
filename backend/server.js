@@ -12,5 +12,5 @@ app.use("/api/products", productRoutes);
 
 app.listen(PORT, () => {
     connectDB();
-    console.log("Server started at http://localhost:5000/products");
+    console.log("Server started at http://localhost:" + PORT);
 })
