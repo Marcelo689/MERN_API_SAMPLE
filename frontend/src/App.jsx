@@ -1,20 +1,20 @@
-import { Container,Box, useColorModeValue } from "@chakra-ui/react"
-import { Route, Routes } from "react-router-dom"
-import HomePage from "./pages/HomePage"
-import CreatePage from "./pages/CreatePage"
-import NavBar from "./components/NavBar"
+import { Box, useColorModeValue } from "@chakra-ui/react";
+import { Route, Routes } from "react-router-dom";
+
+import CreatePage from "./pages/CreatePage";
+import HomePage from "./pages/HomePage";
+import Navbar from "./components/NavBar";
 
 function App() {
-
-  return (
-    <Box minH={"100vh"} bg={useColorModeValue("gray.100","gray.900")}>
-      <NavBar/>
-      <Routes>
-        <Route path="/" element={<HomePage/>}/>
-        <Route path="/create" element={<CreatePage/>}/>
-      </Routes>
-    </Box>
-  )
+	return (
+		<Box minH={"100vh"} bg={useColorModeValue("gray.100", "gray.900")}>
+			<Navbar />
+			<Routes>
+				<Route path='/' element={<HomePage />} />
+				<Route path='/create' element={<CreatePage />} />
+			</Routes>
+		</Box>
+	);
 }
 
-export default App
+export default App;
