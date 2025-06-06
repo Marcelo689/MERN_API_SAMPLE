@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-		"dev": "nodemon backend/server.js",
-		"build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
-		"start": "node backend/server.js \"cd frontend && npm start\""
-	},
+    "dev": "nodemon backend/server.js",
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "concurrently \"node backend/server.js\" \"cd frontend && npm run dev\""
+  },
   "type": "module",
   "keywords": [],
   "author": "",
@@ -21,6 +21,7 @@
     "mongoose": "^8.15.1"
   },
   "devDependencies": {
+    "concurrently": "^9.1.2",
     "nodemon": "^3.1.10"
   }
 }
